@@ -3,14 +3,14 @@
 
 python -V
 export DIR="$(dirname "$(pwd)")"
-source activate torch_GPU
+#source activate torch_GPU
 export PYTHONPATH=${PYTHONPATH}:${DIR}
 
 
 export SEED=42
-export batch_size=16
+export batch_size=64
 export learning_rate=1e-3
-export epochs=100
+export epochs=200
 export task='cifar10'
 
 # model hyperparameters
@@ -18,8 +18,8 @@ export c_in=3
 export c_out=3
 export first_num_channel=64
 export time_dim=256
-export num_layers=4
-export bn_layers=2
+export num_layers=3
+export bn_layers=3
 export rep_learning=False
 
 # filepaths

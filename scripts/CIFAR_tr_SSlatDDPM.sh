@@ -8,9 +8,9 @@ export PYTHONPATH=${PYTHONPATH}:${DIR}
 
 
 export SEED=42
-export batch_size=32
+export batch_size=64
 export learning_rate=1e-3
-export epochs=1
+export epochs=200
 export tasks='cifar10'
 
 # model hyperparameters
@@ -20,7 +20,7 @@ export c_out=3
 export first_num_channel=64
 export time_dim=256
 export num_layers=3
-export bn_layers=2
+export bn_layers=3
 export disc_num_layers=2
 export disc_width=100
 export rep_learning=True
@@ -38,7 +38,7 @@ export output_csv_path='.././output/SSlatentDDPM/cifar10/model_train_history.csv
 export tsne_path='.././output/SSlatentDDPM/cifar10/tsne_plot_'
 
 
-python ../train_SS_latentDDPM.py \
+python ../Train_SS_latentDDPM.py \
 	--SEED ${SEED} \
 	--batch_size ${batch_size} \
 	--learning_rate ${learning_rate} \
